@@ -35,7 +35,6 @@ class Deck implements IDeck {
 		this.cards = []
 	}
 
-	// TODO: Create object/other data-structure to store the value of each card (in order to make the game interesting!)
 	createDeck(): void {
 		const suits = [Suits.Diamonds, Suits.Hearts, Suits.Spades, Suits.Clubs]
 		const ranks = [
@@ -56,7 +55,6 @@ class Deck implements IDeck {
 		for (let rank of ranks) {
 			let card: Card
 			for (let suit of suits) {
-				// Change here!
 				card = { suit, rank, value: 1 }
 				this.cards.push(card)
 			}
@@ -78,7 +76,6 @@ class Deck implements IDeck {
 			deck[i] = t
 		}
 
-		// Update cards
 		this.cards = deck
 	}
 }
